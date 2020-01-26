@@ -1,5 +1,5 @@
 import unittest
-from fizz_buzz import fizz_buzz_game
+from fizz_buzz import fizz_buzz_game, is_divisible
 
 
 class FizzBuzzTest(unittest.TestCase):
@@ -45,6 +45,23 @@ class FizzBuzzTest(unittest.TestCase):
         self.assertEqual('FizzBuzz', res)
         res = fizz_buzz_game(7320)
         self.assertEqual('FizzBuzz', res)
+
+
+class DivisibilityTest(unittest.TestCase):
+    def test_number_divisibility(self):
+        # testing any number divisibility
+        res = is_divisible(2, 9)
+        self.assertEqual(False, res)
+        res = is_divisible(12, 5)
+        self.assertEqual(False, res)
+        res = is_divisible(7, 4)
+        self.assertEqual(False, res)
+        res = is_divisible(2, 2)
+        self.assertEqual(True, res)
+        res = is_divisible(666, 3)
+        self.assertEqual(True, res)
+        res = is_divisible(43435, 7)
+        self.assertEqual(True, res)
 
 
 if __name__ == '__main__':
