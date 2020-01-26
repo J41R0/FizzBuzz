@@ -21,4 +21,5 @@ def fizz_buzz_game(number):
     Returns: A word if number is divisible by 3, 5 or both; number otherwise
 
     """
-    pass
+    if type(number) != int:
+        return "Invalid data type"
