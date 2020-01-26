@@ -8,7 +8,7 @@ def is_divisible(number, divisor):
     Returns: True if number is divisible by divisor; False otherwise
 
     """
-    pass
+    return True if (number % divisor) == 0 else False
 
 
 def fizz_buzz_game(number):
