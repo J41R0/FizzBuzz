@@ -23,3 +23,4 @@ def fizz_buzz_game(number):
     """
     if type(number) != int:
         return "Invalid data type"
+    return number
