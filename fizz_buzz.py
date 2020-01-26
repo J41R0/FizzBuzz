@@ -23,8 +23,11 @@ def fizz_buzz_game(number):
     """
     if type(number) != int:
         return "Invalid data type"
+    if is_divisible(number, 3) and is_divisible(number, 5):
+        return 'FizzBuzz'
     if is_divisible(number, 3):
         return 'Fizz'
     if is_divisible(number, 5):
         return 'Buzz'
+
     return number
